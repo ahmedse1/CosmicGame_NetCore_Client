@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "8+CLR9Iif/LxnlUfKYPAJ2tamDb4ZPVe+oRCfvuZ81oEs6bTc2hppelNVPACfO5WdQ0rV30qFadp1tpUM+mqnQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ahmed Hassan\\source\\repos\\CosmicGameNew\\CosmicGame_NetCore_Client\\Models\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ahmed Hassan\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Ahmed Hassan\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

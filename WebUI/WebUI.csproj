@@ -1,0 +1,85 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\dist\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\dist\js\ace-elements.min.js" />
+    <None Include="wwwroot\dist\js\ace-extra.min.js" />
+    <None Include="wwwroot\dist\js\ace.min.js" />
+    <None Include="wwwroot\dist\js\additional-methods.min.js" />
+    <None Include="wwwroot\dist\js\bootbox.min.js" />
+    <None Include="wwwroot\dist\js\bootstrap-colorpicker.min.js" />
+    <None Include="wwwroot\dist\js\bootstrap-multiselect.min.js" />
+    <None Include="wwwroot\dist\js\bootstrap-tag.min.js" />
+    <None Include="wwwroot\dist\js\bootstrap-wysiwyg.min.js" />
+    <None Include="wwwroot\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\dist\js\chosen.jquery.min.js" />
+    <None Include="wwwroot\dist\js\dataTables\extensions\ColVis\js\dataTables.colVis.min.js" />
+    <None Include="wwwroot\dist\js\dataTables\extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <None Include="wwwroot\dist\js\dataTables\jquery.dataTables.bootstrap.min.js" />
+    <None Include="wwwroot\dist\js\dataTables\jquery.dataTables.min.js" /> 
+    <None Include="wwwroot\dist\js\date-time\bootstrap-datepicker.min.js" />
+    <None Include="wwwroot\dist\js\date-time\bootstrap-datetimepicker.min.js" />
+    <None Include="wwwroot\dist\js\date-time\bootstrap-timepicker.min.js" />
+    <None Include="wwwroot\dist\js\date-time\daterangepicker.min.js" />
+    <None Include="wwwroot\dist\js\date-time\moment.min.js" />
+    <None Include="wwwroot\dist\js\dropzone.min.js" />
+    <None Include="wwwroot\dist\js\flot\jquery.flot.min.js" />
+    <None Include="wwwroot\dist\js\flot\jquery.flot.pie.min.js" />
+    <None Include="wwwroot\dist\js\flot\jquery.flot.resize.min.js" />
+    <None Include="wwwroot\dist\js\fuelux\fuelux.spinner.min.js" />
+    <None Include="wwwroot\dist\js\fuelux\fuelux.tree.min.js" />
+    <None Include="wwwroot\dist\js\fuelux\fuelux.wizard.min.js" />
+    <None Include="wwwroot\dist\js\fullcalendar.min.js" />
+    <None Include="wwwroot\dist\js\jqGrid\i18n\grid.locale-en.js" />
+    <None Include="wwwroot\dist\js\jqGrid\jquery.jqGrid.min.js" />
+    <None Include="wwwroot\dist\js\jquery-ui.custom.min.js" />
+    <None Include="wwwroot\dist\js\jquery-ui.min.js" />
+    <None Include="wwwroot\dist\js\jquery.autosize.min.js" />
+    <None Include="wwwroot\dist\js\jquery.bootstrap-duallistbox.min.js" />
+    <None Include="wwwroot\dist\js\jquery.colorbox.min.js" />
+    <None Include="wwwroot\dist\js\jquery.easypiechart.min.js" />
+    <None Include="wwwroot\dist\js\jquery.gritter.min.js" />
+    <None Include="wwwroot\dist\js\jquery.hotkeys.min.js" />
+    <None Include="wwwroot\dist\js\jquery.inputlimiter.1.3.1.min.js" />
+    <None Include="wwwroot\dist\js\jquery.knob.min.js" />
+    <None Include="wwwroot\dist\js\jquery.maskedinput.min.js" />
+    <None Include="wwwroot\dist\js\jquery.min.js" />
+    <None Include="wwwroot\dist\js\jquery.mobile.custom.min.js" />
+    <None Include="wwwroot\dist\js\jquery.nestable.min.js" />
+    <None Include="wwwroot\dist\js\jquery.raty.min.js" />
+    <None Include="wwwroot\dist\js\jquery.sparkline.min.js" />
+    <None Include="wwwroot\dist\js\jquery.ui.touch-punch.min.js" />
+    <None Include="wwwroot\dist\js\jquery.validate.min.js" />
+    <None Include="wwwroot\dist\js\markdown\bootstrap-markdown.min.js" />
+    <None Include="wwwroot\dist\js\markdown\markdown.min.js" />
+    <None Include="wwwroot\dist\js\prettify.min.js" />
+    <None Include="wwwroot\dist\js\select2.min.js" />
+    <None Include="wwwroot\dist\js\spin.min.js" />
+    <None Include="wwwroot\dist\js\typeahead.jquery.min.js" />
+    <None Include="wwwroot\dist\js\x-editable\ace-editable.min.js" />
+    <None Include="wwwroot\dist\js\x-editable\bootstrap-editable.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="System.Net.Http.Formatting.Extension" Version="5.2.3" />
+    <PackageReference Include="Zebble" Version="4.5.503" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\Utility\Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\Index.cshtml">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

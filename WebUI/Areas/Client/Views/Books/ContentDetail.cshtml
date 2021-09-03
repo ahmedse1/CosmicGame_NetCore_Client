@@ -1,0 +1,83 @@
+﻿@{
+    Layout = "~/Areas/Client/Views/Shared/_Layout.cshtml";
+}
+<script>
+    $(document).ready(function () {
+        document.title = 'Content';
+    });
+</script>
+
+<div class="page-header">
+    <h1>
+        Content Detail
+    </h1>
+</div>
+
+<div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <form class="form-horizontal center-block" id="frmContentDetail">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-6 pl-2 pr-2">
+                    <div class="widget-box">
+                        <div class="widget-header">
+                            <h4 class="widget-title">Content Detail</h4>
+                        </div>
+                        <div class="widget-body">
+                            <div class="widget-main">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="ddlBook">Book</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="ddlBook" data-placeholder="Choose a Book">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="ddlChapter">Chapter</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="ddlChapter" data-placeholder="Choose a Chapter">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="ddlHeader">Header</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="ddlHeader" data-placeholder="Choose a Header">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="txtHeaderTitle">Header Title</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="txtHeaderTitle" placeholder="Title" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label no-padding-right" for="txtContent">Content</label>
+                                    <div class="col-sm-9">
+                                        <textarea rows="10" class="form-control" id="txtContent" placeholder="Content"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="center">
+                        <button class="btn btn-success" type="submit">
+                            <i class="ace-icon fa fa-save"></i>
+                            Confirm & Save
+                        </button>
+                        <a class="btn  btn-inverse" href="/client/Books/Contents">
+                            <i class="ace-icon fa fa-arrow-left"></i>
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+<script src="~/js/Page/books/ContentDetail.js?v=@Utility.GlobalVars.siteVersion"></script>

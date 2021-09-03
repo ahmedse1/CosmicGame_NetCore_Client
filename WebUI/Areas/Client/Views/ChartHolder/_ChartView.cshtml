@@ -1,0 +1,164 @@
+﻿<div id="ShowChartModal" class="modal" role="dialog" data-backdrop="false">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Chart View</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal center-block" id="frmChartHolderDetail">
+                    <div class="row">
+                        <div class="col-sm-12 widget-container-col">
+                            <div class="widget-box">
+                                <div class="widget-header widget-header-small">
+                                    <div class="no-border">
+                                        <ul class="nav nav-tabs" id="myTab">
+                                            <li class="active">
+                                                <a data-toggle="tab" href="#Astro">Astro Chart</a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#Baski">Baski Chart</a>
+                                            </li>
+
+                                            <li>
+                                                <a data-toggle="tab" href="#tabVismo" onclick="getVimsoChart()">Vismo Chart</a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#Varga">Varga Chart</a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tab" href="#Yamagiraka">Yamagiraka Chart</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="widget-body" style="max-height: 700px;overflow-y: scroll; min-height:400px;">
+                                    <div class="widget-main padding-6">
+                                        <div class="tab-content">
+                                            <div id="Astro" class="tab-pane in active">
+                                                <table class="tableAstroChart">
+                                                    <tbody class="ChartBody"></tbody>
+                                                </table>
+                                            </div>
+                                            <div id="Baski" class="tab-pane">
+                                                <table>
+                                                    <tbody class="ChartBody"></tbody>
+                                                </table>
+                                            </div>
+                                            <div id="tabVismo" class="tab-pane">
+                                                <div class="vimso-sub-chart chart-1">
+                                                    <caption class="center"><b>Select the Dissai of your Choice</b></caption>
+                                                    <table class="table  table-bordered">
+                                                        <tbody id="DissaiChartBody" class="ChartBody">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="vimso-sub-chart  chart-2">
+                                                    <caption class="center"><b>Puthi for Dissai <span class="spdissainame"> </span> ( Read Left to Right )</b></caption>
+                                                    <table class="table  table-bordered">
+                                                        <tbody id="puthiChartBody" class="ChartBody">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="vimso-sub-chart chart-3">
+                                                    <caption class="center"><b>All Anthra for Puthi <span class="spputhiname"> </span>  of Dissai <span class="spdissainame"> </span> ( Read Top To Bottom )</b></caption>
+                                                    <table class="table  table-bordered">
+                                                        <tbody id="antraChartBody" class="ChartBody">
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                                <div id="pranaModal" class="modal fade  chart-4" role="dialog" style="position:static!important;">
+                                                    <div class="modal-dialog" style="width:340px;position: absolute;right: 15px;top:-1%;">
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header" style="cursor:move">
+                                                                <button type="button" class="close" onclick="closeprana()">&times;</button>
+                                                                <h4 class="modal-title">Prana</h4>
+                                                            </div>
+                                                            <div class="modal-body" style="max-height:550px; overflow-y:scroll;overflow-x: hidden;">
+                                                                <div class="row">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-11">
+                                                                            <table id="currentDataTable" class="table table-bordered">
+                                                                                <tbody></tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-11">
+                                                                    <table id="pranaTable" class="table table-bordered">
+                                                                        <caption id="pranaCaption" class="text-center">Prana</caption>
+                                                                        <tbody></tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" onclick="closeprana()">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div id="Varga" class="tab-pane">
+                                                <table>
+                                                    <tbody class="ChartBody"></tbody>
+                                                </table>
+                                            </div>
+                                            <div id="Yamagiraka" class="tab-pane">
+                                                <table>
+                                                    <tbody class="ChartBody"></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Modal -->
+
+<script type="text/x-jquery-tmpl" id="tmplDissaichartlist">
+    <tr id="trdissaigroup">
+        <td>Dissai</td>
+    </tr>
+    <tr id="trdissaitime">
+        <td>Time</td>
+    </tr>
+</script>
+
+<script type="text/x-jquery-tmpl" id="tmpldissaigroup">
+    <td id="${GroupName}_${GroupId}" class="dissaicell cursor-pointer" onclick="getPuthiChart('${GroupId}','${GroupName}')">${GroupName}</td>
+</script>
+<script type="text/x-jquery-tmpl" id="tmpldissaitime">
+    <td id="date_${GroupName}_${GroupId}">${strNewDate}</td>
+</script>
+
+<script type="text/x-jquery-tmpl" id="tmplputhichartlist">
+    <tr id="trputhigroup">
+        <td>Puthi</td>
+    </tr>
+    <tr id="trputhitime">
+        <td>Time</td>
+    </tr>
+</script>
+<script type="text/x-jquery-tmpl" id="tmplputhigroup">
+    <td id="${GroupName}_${GroupId}" class="puthicell cursor-pointer" onclick="GetAntraChart('${GroupId}','${GroupName}')">${GroupName}</td>
+</script>
+<script type="text/x-jquery-tmpl" id="tmplputhitime">
+    <td id="date_${GroupName}_${GroupId}">${strNewDate}</td>
+</script>
+
+<script src="~/js/Page/ChartHolder/ChartView.js?v=@Utility.GlobalVars.siteVersion"></script>
